@@ -17,10 +17,14 @@ public class BatalhaService {
 
         double multiplicador = CalculadoraElemental.calcularMultiplicador(habilidade.getTipo(), defensor.getTipo());
 
+        //aqui calcula o dano de atk do atacante + poder da habilidade - def do defensor - HUGO
         int danoBase = atacante.getAtk() + habilidade.getPoder() - defensor.getDef();
         if (danoBase < 0) danoBase = 0;
+
+        //aqui vai aplicar o multiplicador elemental que ajusta o dano causado por ataque - HUGO
         int danoFinal = (int) Math.round(danoBase * multiplicador);
 
+        //aqui vai aplicar o dano de hp no defensor - HUGO
         int novoHp = defensor.getHp() - danoFinal;
         defensor.setHp(novoHp);
         System.out.println(atacante.getNome() + "usou" + habilidade.getNome() + "causando" + danoFinal + "de dano em" + defensor.getNome() + ".");

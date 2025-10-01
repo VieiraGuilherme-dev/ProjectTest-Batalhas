@@ -55,4 +55,12 @@ public class GerenciadorEfeitos {
             }
         }
     }
+    
+    public void removerEfeito(Criatura criatura, EfeitoStatus efeito){
+        //Remover efeito específico da criatura - HUGO
+        if(criatura.getEfeitosAtivos().contains(efeito)){
+            criatura.removerEfeito(efeito);
+            System.out.println("Efeito" + efeito + "removido de " +criatura.getNome());
+        }
+    }
 }
