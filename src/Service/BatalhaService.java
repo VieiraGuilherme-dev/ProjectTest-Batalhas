@@ -80,7 +80,7 @@ public class BatalhaService {
                     break;
 
                 case CURADO:
-                    //efeito de cura instantâneo
+                    //efeito de cura instantâneo - HUGO
                     break;
             }
         }

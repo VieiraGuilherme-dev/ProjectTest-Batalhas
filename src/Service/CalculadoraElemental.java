@@ -4,6 +4,7 @@ import model.TipoElemental;
 
 public class CalculadoraElemental {
 
+    //Aqui são os valores do Multiplicador de dano - HUGO
     // ** Valores de multiplicador:
     //2.0: representa "super efetivo" — o ataque é muito eficaz contra o tipo do defensor,
     //causando dano dobrado.
