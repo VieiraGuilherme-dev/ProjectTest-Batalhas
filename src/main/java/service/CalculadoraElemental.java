@@ -1,12 +1,13 @@
+
 package service;
 
 import model.TipoElemental;
 
 public class CalculadoraElemental {
+
     public static double calcularMultiplicador(TipoElemental atacante, TipoElemental defensor) {
-        if (atacante == null || defensor == null) {
-            return 1.0;
-        }
+        if (atacante == null || defensor == null) return 1.0;
+
         switch (atacante) {
             case FOGO:
                 if (defensor == TipoElemental.TERRA) return 2.0;
@@ -32,6 +33,8 @@ public class CalculadoraElemental {
             case TREVAS:
                 return 1.0;
         }
+
         return 1.0;
     }
+
 }
