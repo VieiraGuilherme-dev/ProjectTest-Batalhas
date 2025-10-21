@@ -1,5 +1,11 @@
 package model;
 
 public enum TipoElemental {
-    FOGO, AGUA, TERRA, AR
+    FOGO,
+    ÁGUA,
+    TERRA,
+    AR,
+    TREVAS,
+    LUZ
+
 }
