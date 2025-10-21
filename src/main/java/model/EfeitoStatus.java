@@ -3,7 +3,8 @@ package model;
 public enum EfeitoStatus {
     QUEIMADO,
     ENVENENADO,
-    PARALISADO,
+    ENFRAQUECIDO,
     CURADO,
-    FORTALECIDO
+    FORTALECIDO,
+    CONGELADO
 }

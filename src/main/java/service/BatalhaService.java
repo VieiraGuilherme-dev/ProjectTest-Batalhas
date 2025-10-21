@@ -1,4 +1,9 @@
-package service;
+// BatalhaService.java
+package Service;
+
+import model.Criatura;
+import model.EfeitoStatus;
+import model.Habilidade;
 
 public class BatalhaService {
     public static void iniciarBatalha(Criatura atacante, Criatura defensor, Habilidade habilidade) {
@@ -10,6 +15,7 @@ public class BatalhaService {
             System.out.println(defensor.getNome() + " já está derrotado");
             return;
         }
+
         double multiplicador = CalculadoraElemental.calcularMultiplicador(habilidade.getTipo(), defensor.getTipo());
 
         int danoBase = atacante.getAtk() + habilidade.getPoder() - defensor.getDef();
@@ -44,4 +50,43 @@ public class BatalhaService {
         }
     }
 
+    public void aplicarEfeitosStatus(Criatura criatura) {
+        if (criatura.estaDerrotado()) {
+            System.out.println("A criatura está derrotada");
+            return;
+        }
+        for (EfeitoStatus efeito : criatura.getEfeitosAtivos()) {
+            switch (efeito) {
+                case QUEIMADO:
+                    int danoQueimado = 4;
+                    criatura.setHp(criatura.getHp() - danoQueimado);
+                    System.out.println(criatura.getNome() + " sofre " + danoQueimado);
+                    break;
+
+                case ENVENENADO:
+                    int danoVeneno = 6;
+                    criatura.setHp(criatura.getHp() - danoVeneno);
+                    System.out.println(criatura.getNome() + " sofre " + danoVeneno);
+                    break;
+
+                case ENFRAQUECIDO:
+                    System.out.println(criatura.getNome() + " está enfraquecido e o ataque será reduzido");
+                    break;
+
+                case FORTALECIDO:
+                    System.out.println(criatura.getNome() + " está fortalecido e o ataque será aumentado");
+                    break;
+
+                case CONGELADO:
+                    System.out.println(criatura.getNome() + " pode perder o turno pois está congelado");
+                    break;
+
+                case CURADO:
+                    break; // efeito de cura instantâneo
+            }
+        }
+        if (criatura.getHp() <= 0) {
+            System.out.println(criatura.getNome() + " foi derrotado pelo efeito de status");
+        }
     }
+}
