@@ -1,75 +1,57 @@
-# 🌟 Arcane Clash 🌟  
-🐉🔥💧🌱 **Batalhas Elementais Épicas!**
+<p align="center">
+  <h1> Arcane Clash 🐉🔥💧🌱</h1>
+</p>
 
-![Banner do jogo](imgs/Captura_de_tela_2025-10-19_191522.png)
-
----
-
-## 🎮 Descrição do Projeto
-
-**Arcane Clash** é um jogo de batalha de criaturas em um universo oriental fantástico!  
-Cada criatura possui **elementos únicos** (🔥Fogo, 💧Água, 🌱Terra) que afetam suas habilidades e estratégias de combate.  
-
-Os jogadores assumem o papel de **Invocadores**, treinando criaturas para competir em torneios, ganhar itens raros e evoluir suas habilidades.
+<p align="center">
+  <img src="src/imgs/Captura de tela 2025-10-19 191522.png" alt="Banner do jogo" width="600"/>
+</p>
 
 ---
 
-## 🌌 Contexto do Jogo
+## 🌏 Contexto do Jogo
+**Universo:** Um mundo místico onde criaturas orientais existem. Cada tipo de elemento (**🔥 Fogo, 💧 Água, 🌱 Terra**) confere poderes únicos para que as criaturas batalhem entre si.
 
-- **Universo:** Criaturas orientais com habilidades elementais.
-- **História:** Você, como invocador, deve treinar suas criaturas para **torneios elementais**, ganhando reputação, itens raros e se tornando uma lenda!
+**História:** O jogador assume o papel de um invocador que deve treinar suas criaturas para competir em torneios elementais, ganhar reputação e coletar itens raros.  
 
 ---
 
 ## ✨ Diferenciais
+<p align="center">
+  <img src="src/imgs/Captura de tela 2025-10-19 200929.png" alt="Diferenciais do jogo" width="600"/>
+</p>
 
-- Sistema de **batalha estratégica baseada em elementos**: vantagens e desvantagens entre Fogo, Água e Terra.  
-- **Efeitos de status** dinâmicos: Queimado 🔥, Envenenado ☠️, Congelado ❄️, e mais.  
-- Evolução e **customização de habilidades** das criaturas.  
-- Torneios desafiadores com **recompensas exclusivas**.
-
-![Diferenciais](Captura%20de%20tela%202025-10-19%20200929.png)
-
----
-
-## 🎯 Público-Alvo
-
-**Jovens e adultos (+12)** que gostam de:
-
-- RPG e estratégia  
-- Colecionar e evoluir criaturas  
-- Competir em torneios e desafios  
+- Mecânica de **batalha estratégica** baseada em elementos.
+- Sistema de **evolução e treino de criaturas**.
+- Torneios desafiadores com **ranking e recompensas exclusivas**.
+- Público-alvo: **Jovens e adultos (+12)** que gostam de RPG, estratégia e colecionáveis.
 
 ---
 
-## 💻 Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Mockito-FF0000?style=for-the-badge&logo=mockito&logoColor=white"/>
+</p>
 
-O projeto foi desenvolvido com **tecnologias modernas e robustas**:  
-
-| Tecnologia | Uso no Projeto |
-|------------|----------------|
-| **Java** | Lógica do jogo e backend |
-| **Spring Boot** | Serviços RESTful e estrutura da aplicação |
-| **JUnit & Mockito** | Testes unitários e mocks, garantindo confiabilidade |
-| **Maven** | Gerenciamento de dependências e build |
-
----
-
-## 🛠 Demonstração Técnica
-
-O sistema permite:
-
-- Criação e gestão de criaturas  
-- Aplicação de **habilidades e efeitos de status**  
-- Simulação de **batalhas elementais estratégicas**  
-- Testes automáticos para **garantir todas funcionalidades**
-
-![Demonstração Técnica](Captura de tela 2025-10-19 204826.png)
+- **Java**: Implementação da lógica do jogo, batalhas, habilidades e efeitos.
+- **Spring Boot**: Estrutura para organizar serviços, controle de criaturas e gerenciamento do sistema.
+- **JUnit & Mockito**: Testes unitários e mocks para garantir que todas as mecânicas funcionem corretamente.
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## 🎬 Demonstração Técnica
+<p align="center">
+  <img src="src/imgs/Captura de tela 2025-10-19 204826.png" alt="Demonstração técnica" width="600"/>
+</p>
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seuusuario/arcane-clash.git
+- Testes de combate aplicando elementos e efeitos de status.
+- Validação de habilidades, multiplicadores elementais e efeitos ativos.
+- Logs mostrando ataques, curas e derrotas.
+
+---
+
+## 📌 Observações
+- O jogo foca em **estratégia e colecionáveis**, permitindo que o jogador explore diferentes combinações de criaturas e elementos.
+- Ideal para quem gosta de **RPGs táticos e desafios competitivos**.
