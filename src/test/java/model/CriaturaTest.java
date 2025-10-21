@@ -1,23 +1,33 @@
 package model;
 
-import model.*;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
-import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class CriaturaTest {
+class CriaturaTest {
+
     @Test
-    public void testCriaturaRecebeEDiminuiHp() {
-        List<Habilidade> habilidades = new ArrayList<>();
-        List<EfeitoStatus> efeitos = new ArrayList<>();
-        Criatura c = new Criatura("Fenix", 100, 20, 10, 5, TipoElemental.FOGO, habilidades, efeitos);
+    void deveAplicarERemoverEfeitosCorretamente() {
+        Criatura criatura = new Criatura("Dragão", 100, 20, 10, 15, TipoElemental.FOGO, new ArrayList<>(), new ArrayList<>());
+        criatura.aplicarEfeito(EfeitoStatus.QUEIMADO);
+        assertTrue(criatura.getEfeitosAtivos().contains(EfeitoStatus.QUEIMADO));
+        criatura.removerEfeito(EfeitoStatus.QUEIMADO);
+        assertFalse(criatura.getEfeitosAtivos().contains(EfeitoStatus.QUEIMADO));
+    }
 
-        c.setHp(50);
-        assertEquals(50, c.getHp());
-        assertFalse(c.estaDerrotado());
+    @Test
+    void deveReduzirHpSemFicarNegativo() {
+        Criatura criatura = new Criatura("Golem", 50, 15, 20, 8, TipoElemental.TERRA, new ArrayList<>(), new ArrayList<>());
+        criatura.setHp(-10);
+        assertEquals(0, criatura.getHp(), "HP não pode ser negativo.");
+        assertTrue(criatura.estaDerrotado());
+    }
 
-        c.setHp(0);
-        assertTrue(c.estaDerrotado());
+    @Test
+    void deveAdicionarHabilidade() {
+        Criatura criatura = new Criatura("Fênix", 120, 25, 15, 20, TipoElemental.FOGO, new ArrayList<>(), new ArrayList<>());
+        Habilidade habilidade = new Habilidade("Chama Viva", "Ataque flamejante", 40, TipoElemental.FOGO, EfeitoStatus.QUEIMADO);
+        criatura.adicionarHabilidade(habilidade);
+        assertEquals(1, criatura.getHabilidades().size());
     }
 }
