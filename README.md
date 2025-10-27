@@ -2,9 +2,6 @@
   <h1> Arcane Clash 🐉🔥💧🌱</h1>
 </p>
 
-<p align="center">
-  <img src="src/imgs/Captura de tela 2025-10-19 191522.png" alt="Banner do jogo" width="600"/>
-</p>
 
 ---
 
@@ -16,9 +13,7 @@
 ---
 
 ## ✨ Diferenciais
-<p align="center">
-  <img src="src/imgs/Captura de tela 2025-10-19 200929.png" alt="Diferenciais do jogo" width="600"/>
-</p>
+
 
 - Mecânica de **batalha estratégica** baseada em elementos.
 - Sistema de **evolução e treino de criaturas**.
@@ -42,9 +37,6 @@
 ---
 
 ## 🎬 Demonstração Técnica
-<p align="center">
-  <img src="src/imgs/Captura de tela 2025-10-19 204826.png" alt="Demonstração técnica" width="600"/>
-</p>
 
 - Testes de combate aplicando elementos e efeitos de status.
 - Validação de habilidades, multiplicadores elementais e efeitos ativos.
